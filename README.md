@@ -40,6 +40,3 @@ Your feedback contributes to the continuous enhancement of the gift recommendati
 Your preferences, along with your evaluation and feedback, are incorporated into the system's dataset.
 The machine learning model is then retrained using this updated dataset, enabling it to learn from your interactions and improve its predictions over time.
 As you use the app and provide feedback, you contribute to enhancing the overall effectiveness of the recommendation system.
-
-Contact
-Twinshu Parmar: twinshup@gmail.com  
