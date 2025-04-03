@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+.modal-form-input{
+  border: 1px solid black;
+  border-radius: 0.375rem;
+  padding:0.5rem;
+  margin-top: 0.5rem;
+}
+
+  .remove-arrows {
+    @apply [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none;
+  }
+  .heading-style {
+    @apply font-semibold text-3xl text-center text-background p-4;
+  }
+  .gender-img-style {
+    @apply border-4 w-80 h-80 border-white hover:border-dark rounded-full cursor-pointer;
+  }
+
+  
+  .rating_bar {
+    width: 100px;
+    height: 20px;
+    display: inline-block;
+    display: inline;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+  }
+
+  .rating_bar > span:before {
+    content: "\2605";
+    color: #c7c5c5;
+    height: 20px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 2em;
+  }
+
+  .rating_bar > span:hover:before,
+  .rating_bar span:hover ~ span:before {
+    color: #f7db3c;
+  }
+}
+
+.square {
+  transform: rotateY(45deg);
+  animation: rotateAnimation 3s linear infinite;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: rotateY(90deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  75% {
+    transform: rotateY(270deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
