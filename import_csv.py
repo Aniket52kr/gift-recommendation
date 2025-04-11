@@ -1,15 +1,11 @@
 import os
 import pandas as pd
 from pymongo import MongoClient
-from dotenv import load_dotenv  # Load environment variables
 
-# ✅ Load environment variables from .env file
-load_dotenv()
-
-# ✅ Get MongoDB credentials securely
-MONGO_URI = os.getenv("MONGO_URI")
-DATABASE_NAME = os.getenv("DATABASE_NAME")
-COLLECTION_NAME = os.getenv("COLLECTION_NAME")
+# ✅ Hardcoded MongoDB credentials
+MONGO_URI = "mongodb+srv://caniketbawankar:aCuMbMgFzhqx3LEf@gift-recommendation.dcta7.mongodb.net/flask_db?retryWrites=false&w=majority&tls=true"
+DATABASE_NAME = "flask_db"
+COLLECTION_NAME = "Database"
 
 # ✅ Connect to MongoDB
 try:
@@ -23,19 +19,20 @@ except Exception as e:
 
 # ✅ Load CSV file safely
 try:
-    df = pd.read_csv("dataset.csv", on_bad_lines="skip")  # Skips corrupted lines
+    df = pd.read_csv("Assignment.csv", on_bad_lines="skip")
     print(f"✅ CSV Loaded Successfully! Total Rows: {len(df)}")
 except Exception as e:
     print(f"❌ Error Loading CSV: {e}")
     exit()
 
-# ✅ Check & Clean Data (Remove Empty Rows)
-df.dropna(inplace=True)  # Remove rows with missing values
+# ✅ Clean Data (Remove Empty Rows)
+df.dropna(inplace=True)
+print(f"✅ Cleaned Data. Rows after dropna: {len(df)}")
 
-# ✅ Convert DataFrame to Dictionary
+# ✅ Convert to dictionary
 data_dict = df.to_dict(orient="records")
 
-# ✅ Insert into MongoDB with Error Handling
+# ✅ Insert data
 try:
     if data_dict:
         collection.insert_many(data_dict)
