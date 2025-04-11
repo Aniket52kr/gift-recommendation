@@ -12,8 +12,18 @@ const maleArray = [
   "Son",
   "Boss",
   "Colleague",
+  "Grandfather",
+  "Uncle",
+  "Boyfriend",
+  "Fiancé",
+  "Teacher",
+  "Mentor",
+  "Teammate",
+  "Neighbor",
+  "Cousin",
   "Any"
 ];
+
 const femaleArray = [
   "For Her",
   "Wife",
@@ -23,8 +33,20 @@ const femaleArray = [
   "Daughter",
   "Boss",
   "Colleague",
+  "Grandmother",
+  "Aunt",
+  "Girlfriend",
+  "Fiancée",
+  "Teacher",
+  "Mentor",
+  "Teammate",
+  "Neighbor",
+  "Cousin",
   "Any"
 ];
+
+
+
 const RelationshipInputStep = () => {
   const [selectedInterest, setInterest] = useState();
   const [activeInterest, setActiveInterest] = useState(null);

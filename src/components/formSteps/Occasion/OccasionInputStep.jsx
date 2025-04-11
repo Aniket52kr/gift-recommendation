@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { UserContext, UserDispatchContext } from "../../Context";
 import PrevNext from "../../PrevNext";
 import InterestCard from "../Interest/InterestCard";
+
 const maleArray = [
   "Anniversary",
   "Baby & Expecting",
@@ -11,8 +12,19 @@ const maleArray = [
   "Father's Day",
   "Friendship Day",
   "New Year's",
+  "Raksha Bandhan",
+  "Graduation",
+  "Promotion",
+  "Retirement",
+  "Men's Day",
+  "Housewarming",
+  "Farewell",
+  "Valentine's Day",
+  "Achievement Celebration",
+  "Sports Victory",
   "Any",
 ];
+
 const femaleArray = [
   "Anniversary",
   "Baby & Expecting",
@@ -23,8 +35,20 @@ const femaleArray = [
   "Mother's Day",
   "New Year's",
   "Raksha Bandhan",
+  "Graduation",
+  "Promotion",
+  "Retirement",
+  "Women's Day",
+  "Karva Chauth",
+  "Housewarming",
+  "Farewell",
+  "Valentine's Day",
+  "Bridal Shower",
+  "Achievement Celebration",
   "Any",
 ];
+
+
 
 const OccasionInputStep = () => {
   const [selectedInterest, setInterest] = useState();
