@@ -41,9 +41,9 @@ const ModalForm = ({ selectedGift,  setIsOpenModal }) => {
       order_id: PaymentsDetails.id,
       callback_url:`http://localhost:5000/payment/paymentverification/${token}`,
       prefill: {
-        name: "Kartik Gamot",
+        name: "Aniket Bawankar",
         email: "",
-        contact: "8963089123",
+        contact: "9284702879",
       },
       notes: {
         address: "Razorpay Corporate Office",
